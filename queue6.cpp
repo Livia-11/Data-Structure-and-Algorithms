@@ -80,6 +80,25 @@ int main(){
  q.dequeue();
  q.dequeue();
  q.dequeue();
- 
+ cout<<q.front()<<endl;
+ cout<<q.getSize()<<endl;
+ cout<<q.isEmpty()<<endl;
+ q.enqueue(60);
+ q.enqueue(70);
+ q.display();
+ q.dequeue();
+ q.dequeue();
+ cout<<q.front()<<endl;
+ cout<<q.getSize()<<endl;
+
+ while(!q.isEmpty()){
+    cout<<q.front()<<endl;
+    q.dequeue();
+ }
+ cout<<q.getSize()<<endl;
+ cout<<q.isEmpty()<<endl;
+   return 0;
+}
+
 
 
