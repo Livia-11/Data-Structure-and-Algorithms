@@ -51,4 +51,11 @@ void dequeue(){
        delete temp;
        size--;
     }
+int front(){
+       if(isEmpty()){
+        return 0;
+       }
+       return head->data;
+    }
+
 
