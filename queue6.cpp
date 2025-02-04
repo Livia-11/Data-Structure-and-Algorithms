@@ -52,6 +52,14 @@ class Queue{
        delete temp;
        size--;
     }
+    T front(){
+       if(isEmpty()){
+        return 0;
+       }
+       return head->data;
+    }
+
+
 
 
 
