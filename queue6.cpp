@@ -42,5 +42,16 @@ class Queue{
        }
        size++;
     }
+    void dequeue(){
+       if(isEmpty()){
+        return;
+       }
+       Node<T>* temp = head;
+       head = head->next;
+       temp->next = NULL;
+       delete temp;
+       size--;
+    }
+
 
 
