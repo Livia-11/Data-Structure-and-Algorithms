@@ -67,3 +67,19 @@ temp=temp->next;
     }
 };
 
+int main(){
+ Queue q;
+ q.enqueue(10);
+ q.enqueue(20);
+ q.enqueue(30);
+ q.enqueue(40);
+ q.enqueue(50);
+ q.enqueue(60);
+ q.enqueue(70);
+ q.display();
+ cout<<q.front()<<endl;
+ q.dequeue();
+ q.dequeue();
+ q.dequeue();
+ 
+
