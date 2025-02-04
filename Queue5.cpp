@@ -1,8 +1,10 @@
 #include<iostream>
 using namespace std;
+
+template <typename T>
 struct  Queue{
 int capacity;
-int *queue;
+T *queue;
 int front;
 int rear;
 int siz;
@@ -50,9 +52,9 @@ void display(){
         cout<<"Element at i="<<i<<" "<<queue[i]<<endl;
     }
 }
-void enqueue(int val){
+void enqueue(T val){
     if(isFull()){
-        int *newArray=new int[capacity*2];
+       T *newArray=new T[capacity*2];
         for(int j=0;j<capacity;j++){
             newArray[j]=queue[j];
         }
@@ -67,7 +69,7 @@ void enqueue(int val){
     queue[rear]=val;
     siz++;
 }
-int peek(){
+T peek(){
     if(front==-1){
         cout<<"Queue is empty"<<endl;
         return 0;
