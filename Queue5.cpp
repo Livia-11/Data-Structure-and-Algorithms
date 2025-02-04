@@ -18,19 +18,19 @@ bool isEmpty(){
 bool isFull(){
     return siz==capacity;
 }
-void enqueue(int val){
-    if(isFull()){
-        cout<<"Queue is Full"<<endl;
-    }
-    else{
-        if(front==-1){
-            front=0;
-        }
-        rear++;
-        queue[rear]=val;
-        siz++;
-    }
-}
+// void enqueue(int val){
+//     if(isFull()){
+//         cout<<"Queue is Full"<<endl;
+//     }
+//     else{
+//         if(front==-1){
+//             front=0;
+//         }
+//         rear++;
+//         queue[rear]=val;
+//         siz++;
+//     }
+// }
 void dequeue(){
     if(isEmpty()){
         cout<<"Queue is empty"<<endl;
@@ -50,6 +50,23 @@ void display(){
         cout<<"Element at i="<<i<<" "<<queue[i]<<endl;
     }
 }
+void enqueue(int val){
+    if(isFull()){
+        int *newArray=new int[capacity*2];
+        for(int j=0;j<capacity;j++){
+            newArray[j]=queue[j];
+        }
+        delete [] queue;
+        queue=newArray;
+        capacity=capacity*2;
+    }
+    if (front == -1 ){
+        front = 0;
+    }
+    rear++;
+    queue[rear]=val;
+    siz++;
+}
 int peek(){
     if(front==-1){
         cout<<"Queue is empty"<<endl;
@@ -59,15 +76,16 @@ int peek(){
 }
 };
 int main(){
-    Queue *q=new Queue(5);
+    Queue *q=new Queue(5);//Queue q(5);
     cout<<"Adding elements"<<endl;
-    q->enqueue(10);
+    q->enqueue(10);//q.enqueue();
     q->enqueue(20);
     q->enqueue(30);
     q->enqueue(40);
     q->enqueue(50);
-    cout<<q->count()<<endl;
     q->enqueue(60);
+    cout<<q->count()<<endl;
+    q->enqueue(66);
     q->display();
     q->dequeue();
     q->dequeue();
@@ -85,4 +103,3 @@ int main(){
 
 
 
- 
