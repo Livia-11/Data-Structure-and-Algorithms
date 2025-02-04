@@ -41,4 +41,14 @@ void enqueue(int ele){
        }
        size++;
     }
+void dequeue(){
+       if(isEmpty()){
+        return;
+       }
+       Node* temp = head;
+       head = head->next;
+       temp->next = NULL;
+       delete temp;
+       size--;
+    }
 
