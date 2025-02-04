@@ -24,9 +24,7 @@ class Queue{
     int getSize(){
        return size;
     }
- int count(){
-       …;
-    }
+    
     bool isEmpty(){
        return size==0;
     }
