@@ -58,6 +58,14 @@ class Queue{
        }
        return head->data;
     }
+    void display(){
+ Node<T> *temp=head;
+   while(temp!=NULL){
+cout<<temp->data<<" ";
+temp=temp->next; 
+    }
+    }
+
 
 
 
