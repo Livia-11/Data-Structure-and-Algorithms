@@ -30,4 +30,17 @@ class Queue{
     bool isEmpty(){
        return size==0;
     }
+    
+    void enqueue(T ele){
+       Node<T>* n = new Node<T>(ele);
+       if(head==NULL){
+        head = n;
+        tail = n;
+       }else{
+         tail->next = n;
+         tail = n;
+       }
+       size++;
+    }
+
 
