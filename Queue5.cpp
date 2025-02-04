@@ -12,7 +12,7 @@ Queue(int cap){
     capacity=cap;
     front=rear=-1;
     siz=0;
-    queue=new int[capacity];
+    queue=new T[capacity];
 }
 bool isEmpty(){
     return siz == 0;
@@ -78,7 +78,7 @@ T peek(){
 }
 };
 int main(){
-    Queue *q=new Queue(5);//Queue q(5);
+    Queue<double> *q=new Queue<double>(5);//Queue q(5);
     cout<<"Adding elements"<<endl;
     q->enqueue(10);//q.enqueue();
     q->enqueue(20);
