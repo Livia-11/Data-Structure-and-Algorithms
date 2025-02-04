@@ -12,3 +12,22 @@ class Node{
        }
 };
 
+template<typename T>
+class Queue{
+    Node<T>* head;
+    Node<T>* tail;
+    int size;
+
+  public:
+    Queue(){
+        head = NULL;
+        tail = NULL;
+        size = 0;
+    }
+    int getSize(){
+       return size;
+    }
+    bool isEmpty(){
+       return size==0;
+    }
+
