@@ -10,4 +10,24 @@ class Node{
        }
 };
 
+class Queue{
+    Node* head;
+    Node* tail;
+    int size;
+
+  public:
+    Queue(){
+        head = NULL;
+        tail = NULL;
+        size = 0;
+    }
+    int getSize(){
+       return size;
+    }
+ int count(){
+       …;
+    }
+    bool isEmpty(){
+       return size==0;
+    }
 
